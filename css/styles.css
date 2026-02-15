@@ -1,26 +1,70 @@
-/* reset standart style */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
+:root {
+--main-font-color: #555555;
+
+--white-font-color: #FFFFFF;
+--black-font-color: #303030;
+--gray-font-color-100: #9DA4BD;
+--gray-font-color-60: rgba(157, 164, 189, 0.6);
+--accent-color: #FF6C00;
+--gray-background: #F7F7F7;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-img {
+*:not(dialog) {
+  margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  color: var(--main-font-color);
+  font-family: 'Raleway';
+  line-height: normal;
+}
+
+img, picture, video, canvas, svg {
   display: block;
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+#root, #__next {
+  isolation: isolate;
 }
 
 button {
   display: block;
   cursor: pointer;
   border: none;
-  border-radius: 4px;
-
+  padding: 0;
+  margin: 0;
 }
 
 ul,
@@ -34,82 +78,243 @@ a {
   text-decoration: none;
 } 
 
-.section {
-    width: 1600px; 
-    margin-left: auto; 
-    margin-right: auto;  
-    padding: 0 215px;
-    background-color: blueviolet;
+.section-image {
+  background-image: url("../images/slider1.jpg");
+  background-position: left 315px bottom 0;
+  background-repeat: no-repeat;
+  background-size: 1070px 680px;
+  height: 680px;
+  width: 1600px; 
+  margin-left: auto; 
+  margin-right: auto;  
+  outline: 1px solid blue;
+}
+
+.section {    
+    outline: 1px solid green;
+    padding: 120px 0;
 }
 .container {
-    outline: 1px solid red;
-    background-color: beige;
+  width: 1600px;
+  padding: 0 215px;
+  margin: 0 auto;
+  outline: 1px solid red;
+    
 }
 
-.notification {
-  font-size: 20px;
-  line-height: 1.5;
-  font-weight: 500;
-  color:azure;
-  
-  margin: 0;
-  padding-left: 20px;
+.header {
+  padding-top: 32px;  
+}
+
+.nav {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  background-color: palevioletred;
-  height: 50px;
-  overflow: hidden;
-  flex-wrap: wrap;
- }
+}
+.logo {
+  margin-right: 131px;
+}
+.nav__list {
+  display: flex;
+  gap: 30px;
+  height: 40px;
+  align-items: center;
+}
+.nav__link, .phone__link {
+  color: var(--white-font-color);
+}
+.nav__link:hover,
+.nav__link:focus,
+.nav__link:active, 
+.phone__link:hover,
+.phone__link:active,
+.phone__link:focus {
+  color: var(--accent-color);
+}
 
-.notification--success {
-  background-color: green;
+
+.nav__actions {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 20px;
+  height: 40px;
+}
+
+.btn {
+  padding: 12px 20px;
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+  color: var(--white-font-color);
+  background-color: transparent;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  background-color: var(--accent-color);
+}
+
+.hero {
+  padding-top: 192px;
+  padding-bottom: 40px;
+}
+
+.hero__content {
+  margin-left: 200px;
+  color: var(--gray-font-color-100);
+  width: 444px;
+  height: 200px;
+}
+
+.section__label {
+  font-family: 'Open Sans';
+  font-weight: 500;
+  font-size: 11px;
+  color: var(--gray-font-color-60);
+  text-transform: uppercase;
+  position: relative;
+  margin-left: 90px;
+  margin-bottom: 20px;
+}
+.section__label::before {
+  content: '';
+  display: inline-block;
+  width: 60px;
+  height: 1px;
+  position: absolute;
+  top: 7px;
+  left: -90px;
+  background-color: var(--gray-font-color-60);
+}
+.section__title {
 
 }
 
-.notification--error {
-  background-color: red;
+
+.hero__title {
+  font-family: "Raleway";
+  font-size: 72px;
+  text-wrap: nowrap;
+  /* font-weight: bold; */
+  color: var(--white-font-color);
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+}
+
+.hero__text {
+  color: var(--gray-font-color-100);
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(30px / 18px);
+  letter-spacing: 0.02em;
   
- 
 }
 
-.notification--warning {
-  background-color: orange;
+.socials__list {
+  writing-mode: sideways-lr;
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+  position: relative;
+  height: 270px;
+  padding: 0;
+  margin: 0;
+  margin-top: 91px;
 }
 
-.notification__icon {
- font-size: 40px;
- display: none;
+.socials__list::before {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 60px;
+  position: absolute;
+  left: 7px;
+  bottom: -0px;
+  
+  background-color: black;
+  writing-mode: sideways-lr;
 }
 
-.notification__icon--append {
-  margin-left: 20px;
+.socials__link {
+  color: var(--black-font-color);
+  font-family: "Open Sans";
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
 }
-.notification__icon--prepend {
+
+.socials__link:hover,
+.socials__link:focus,
+.socials__link:active {
+  color: var(--accent-color);
+}
+.hero__container {
+  display: flex;
+}
+
+.slide-show {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+  margin-left: auto;
   margin-right: 20px;
 }
 
-.notification:hover .notification__icon{
-  display: inline;
-  padding-right: 20px;
-}
-
-.notification:hover{
-  overflow: visible;
-  height: max-content;
-  min-height: 50px;
-  
-  
-  
-}
-.notification--error__label {
- line-height: 2.5;
- 
-}
-
-.warning-text{
+.about {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  gap: 30px;
+
+}
+.about__list {
+  display: flex;
+  gap: 30px;
+  width: 570px;
+}
+
+.about__img {
+  min-width: 270px;
+  /* height: 445px; */
+}
+
+.navigation__btn {
+  background-color: transparent;
+  border-bottom: 1px solid var(--gray-font-color-60);
+  color: var(--gray-font-color-60);
+  padding-bottom: 8px;
+  border-radius: 0;
+  width: 60px;
+  font-family: "Open Sans";
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  text-align: left;
+}
+
+.navigation__btn-rigth {
+  text-align: right;
+}
+
+.navigation__btn-active {
+  border-bottom: 1px solid var(--white-font-color);
+  color: var(--white-font-color);
+}
+
+
+.team__list {
+   display: flex;
+  gap: 30px;
+}
+.portfolio__list {
+  display: flex;
+  gap: 30px;
+}
+
+
+.section--prices {
+  background-image: linear-gradient(rgba(17, 19, 25, 0.8), rgba(17, 19, 25, 0.8)), url("../images/img-bg-serv-and-price.jpg");
+}
+.section--teams {
+  background-color: var(--gray-background);
 }

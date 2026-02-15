@@ -8,79 +8,90 @@
     <link
       href="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <!-- --------------------------------------------------------HEADER SECTION---------------------------------------------------------------->
-    <header class="section section--header">
-      <div class="container container--header">
-        <nav class="section--header__nav">
+    
+  <section class="section-image">
+<!-- --------------------------------------------------------HEADER SECTION---------------------------------------------------------------->
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
           <a class="logo" href="">
-            <svg class="logo__icon" width="" height="">
-              <use href=""></use>
-            </svg>
+            <img src="./images/Logo.svg" width="70" height="56"/>
           </a>
-          <ul class="nav-list">
-            <li class="nav-list__item">
-              <a class="nav-list__link" href="">About</a>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="">About</a>
             </li>
-            <li class="nav-list__item">
-              <a class="nav-list__link" href="">Services and prices</a>
+            <li class="nav__item">
+              <a class="nav__link" href="">Services and prices</a>
             </li>
-            <li class="nav-list__item">
-              <a class="nav-list__link" href="">Barbers</a>
+            <li class="nav__item">
+              <a class="nav__link" href="">Barbers</a>
             </li>
-            <li class="nav-list__item">
-              <a class="nav-list__link" href="">Contacts</a>
+            <li class="nav__item">
+              <a class="nav__link" href="">Contacts</a>
             </li>
           </ul>
+          <div class="nav__actions">
+            <a class="phone__link" href="tel:+38 044 111 11 11">+38 044 111 11 11</a>
+            <button class="header__booking-btn btn" type="submit">
+              Online-booking
+            </button>
+         </div>
         </nav>
-        <a class="header-contacts" href="tel:+38 044 111 11 11"
-          >+38 044 111 11 11</a
-        >
-        <button class="header__booking-btn btn" type="submit">
-          Online-booking
-        </button>
       </div>
     </header>
     <main>
-      <!-- ---------------------------------------------------------HERO SECTION--------------------------------------------------------------->
-      <section class="section section--hero">
-        <div class="container container--hero">
-          <p class="section__overhead-title">A hair salon for men in Kyiv</p>
-          <h1 class="section__main-section-title">BarberShop</h1>
-          <p class="section__subtitle">
+<!------------------------------------------------------------HERO SECTION--------------------------------------------------------------->
+      <section class="hero section">
+        <div class="container hero__container">
+           <ul class="socials__list">
+            <li class="socials__item"><a href="" class="socials__link">Instagram</a></li>
+            <li class="socials__item"><a href="" class="socials__link">Youtube</a></li>
+          </ul>
+          <div class="hero__content">
+          <p class="section__label">A hair salon for men in Kyiv</p>
+          <h1 class="hero__title">BarberShop</h1>
+          <p class="hero__text">
             We are experts in trendy men&apos;s haircuts. We work quickly,
             carefully and with style.
           </p>
-          <ul class="socials-list">
-            <li class="socials-list__item"><a>Instagram</a></li>
-            <li class="socials-list__item"><a>Youtube</a></li>
-          </ul>
+           </div>
+        
+         
           <div class="slide-show">
-            <ul>
+            <!-- <ul>
               <li>1</li>
               <li>2</li>
               <li>3</li>
-            </ul>
-            <button type="button">Back</button>
-            <button type="button">Forward</button>
+            </ul> -->
+            <button class="navigation__btn navigation__btn-left" type="button">Back</button>
+            <button class="navigation__btn navigation__btn-rigth navigation__btn-active" type="button">Forward</button>
           </div>
+       
         </div>
+       
       </section>
       <section class="section section--about">
-        <div class="container container--about">
-          <ul class="section--about__list">
-            <li class="section--about__item">photo 1</li>
-            <li class="section--about__item">photo 2</li>
+        <div class="container about">
+          <ul class="about__list">
+            <li class="section--about__item"><img class="about__img" src="./images/beard.jpg" width="270" height="445"/></li>
+            <li class="section--about__item"><img class="about__img" src="./images/hair.jpg" width="270" height="445"/></li>
           </ul>
-          <p class="section__overhead-title">About</p>
+          <div>
+          <p class="section__label">About</p>
           <h2 class="section__title">Best Barbershop in your city</h2>
           <p class="section__subtitle">
             If you want to add more confidence to your image, you should
             definitely visit us.
           </p>
-          <p class="section__paragraph">
+          <p class="section__text">
             We are a team that never stops at what has been achieved and are
             thirsty for changes. And when you fall into the hands of our master,
             you will never be the same again. We are a team that is always "on
@@ -88,37 +99,15 @@
             improve everyone who comes to us!
           </p>
           <button class="btn" type="submit">ONLINE-BOOKING</button>
-          <div style="padding: 20px; border: 1px solid blueviolet; width: 30%">
-            <p class="notification notification--success">
-              <span class="notification__icon notification__icon--prepend"
-                >🚀</span
-              >
-              Пополнение счета выполнено
-            </p>
-            <p class="notification notification--warning">
-              Внимание, будут изменены тарифы
-            </p>
-            <p class="notification notification--error">
-              <span class="notification--error__label"
-                >Ошибка проведения транзакций</span
-              >
-              <span class="warning-text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
-                quisquam omnis voluptates unde reprehenderit distinctio a
-                tenetur consectetur dolore accusamus!
-
-                <span class="notification__icon notification__icon--append"
-                  >👨‍🚀</span
-                ></span
-              >
-            </p>
           </div>
+         
+         
         </div>
       </section>
       <!-- -----------------------------------------------------------PRICES SECTION------------------------------------------------------------->
       <section class="section section--prices">
         <div class="container container--prices">
-          <p class="section__overhead-title">
+          <p class="section__label">
             Spend your time with the best masters
           </p>
           <h2 class="section__title">Services and prices</h2>
@@ -186,11 +175,12 @@
             For true enjoyers of the atmosphere
           </p>
           <h2 class="section__title">Our barbers</h2>
-          <ul class="team-list">
+          <ul class="team__list">
             <li class="team-list__item">
               <div>
-                <img class="team-list__barber-photo" src="" alt="" width="" />
+                <img class="team-list__barber-photo" src="./images/john-smith.jpg" alt="" width="" />
                 <div>
+    
                   <h3 class="team-list__barber-name">John Smith</h3>
                   <p class="team-list__barber-position">Extreme Barber</p>
                   <ul class="social-media">
@@ -212,7 +202,7 @@
             </li>
             <li class="team-list__item">
               <div>
-                <img class="team-list__barber-photo" src="" alt="" width="" />
+                <img class="team-list__barber-photo" src="./images/michele-doe.jpg" alt="" width="" />
                 <div>
                   <h3 class="team-list__barber-name">Michele Doe</h3>
                   <p class="team-list__barber-position">Extreme Barber</p>
@@ -235,7 +225,7 @@
             </li>
             <li class="team-list__item">
               <div>
-                <img class="team-list__barber-photo" src="" alt="" width="" />
+                <img class="team-list__barber-photo" src="./images/alan-black.jpg" alt="" width="" />
                 <div>
                   <h3 class="team-list__barber-name">Alan Black</h3>
                   <p class="team-list__barber-position">Extreme Barber</p>
@@ -264,18 +254,18 @@
         <div class="container container--portfolio">
           <p class="section__overhead-title">In Latin, "barba" means "beard"</p>
           <h2 class="section__title" hidden>Portfolio</h2>
-          <ul class="portfolio-list">
+          <ul class="portfolio__list">
             <li class="portfolio-list__item">
-              <img class="portfolio-list__img" src="" alt="" />
+              <img class="portfolio-list__img" src="./images/haircut.jpg" alt="" />
             </li>
             <li class="portfolio-list__item">
-              <img class="portfolio-list__img" src="" alt="" />
+              <img class="portfolio-list__img" src="./images/beardshave.jpg" alt="" />
             </li>
             <li class="portfolio-list__item">
-              <img class="portfolio-list__img" src="" alt="" />
+              <img class="portfolio-list__img" src="./images/wipeface.jpg" alt="" />
             </li>
             <li class="portfolio-list__item">
-              <img class="portfolio-list__img" src="" alt="" />
+              <img class="portfolio-list__img" src="./images/trim.jpg" alt="" />
             </li>
           </ul>
         </div>
@@ -322,5 +312,6 @@
         </ul>
       </div>
     </footer>
+     </section>
   </body>
 </html>
